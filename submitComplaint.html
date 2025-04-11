@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Submit Complaint - Whistleblower</title>
 </head>
+
 <body>
   <h2>🕵️‍♂️ Anonymous Complaint Submission</h2>
 
@@ -47,7 +49,7 @@
       const formData = new FormData(form);
 
       try {
-        fetch('https://backend-z7cm.onrender.com', {
+        const res = await fetch('http://localhost:5000/api/complaint', {
           method: 'POST',
           body: formData
         });
@@ -75,4 +77,5 @@
     };
   </script>
 </body>
+
 </html>
